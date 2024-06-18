@@ -1,6 +1,15 @@
+function formatHeight() {
+    let input = document.getElementById('estatura');
+    let value = input.value;
+
+    if (value.length === 1 && !value.includes('.')) {
+        input.value = value + '.';
+    }
+}
+
 function imc() {
-    const esta = Number(document.getElementById('estatura').value);
-    const peso = Number(document.getElementById('peso').value);
+    const esta = parseFloat(document.getElementById('estatura').value);
+    const peso = parseFloat(document.getElementById('peso').value);
 
     if (!esta || !peso) {
         document.getElementById('result1').innerHTML = `<div class='alert alert-danger' role='alert'><strong>Error:</strong> Ambos valores deben ser numéricos.</div>`;
@@ -39,7 +48,7 @@ function imc() {
     }
 
     document.getElementById('result1').innerHTML = `<div class='alert ${color}' role='alert'><strong>IMC : </strong> ${valor}</div>`;
-};
+}
 
 
 function presion_alt() {
