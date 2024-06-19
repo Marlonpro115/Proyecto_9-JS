@@ -5,7 +5,7 @@ function formatHeight() {
     if (value.length === 1 && !value.includes('.')) {
         input.value = value + '.';
     }
-}
+};
 
 function imc() {
     const esta = parseFloat(document.getElementById('estatura').value);
@@ -47,7 +47,7 @@ function imc() {
         color = 'alert-danger';
     }
 
-    document.getElementById('result1').innerHTML = `<div class='alert ${color}' role='alert'><strong>IMC : </strong> ${valor}</div>`;
+    document.getElementById('result1').innerHTML = `<div class='alert ${color}' role='alert'><strong>IMC :</strong> ${imc.toFixed(2)} <br> ${valor}</div>`;
 }
 
 
